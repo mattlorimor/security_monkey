@@ -74,9 +74,22 @@ class LambdaFunctionWatcherTestCase(SecurityMonkeyWatcherTestCase):
         watcher.get_method = lambda *args, **kwargs: mock_get_method(args[0])
 
         item_list, exception_map = watcher.slurp()
-        print(item_list)
 
+        i0 = [
+            item_list.[0].index,
+            item_list.[0].region,
+            item_list.[0].account,
+            item_list.[0].name,
+            item_list.[0].arn
+        ]
+        i1 = [
+            item_list.[1].index,
+            item_list.[1].region,
+            item_list.[1].account,
+            item_list.[1].name,
+            item_list.[1].arn
+        ]
         self.assertIs(
             expr1=len(item_list),
             expr2=1,
-            msg="Watcher should have 1 item but has {}{}".format(item_list[0].name, item_list[1].name))
+            msg="Watcher should have 1 item but has {}|{}".format(i0, i1))
