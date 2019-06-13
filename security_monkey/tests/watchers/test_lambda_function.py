@@ -74,6 +74,7 @@ class LambdaFunctionWatcherTestCase(SecurityMonkeyWatcherTestCase):
         watcher.get_method = lambda *args, **kwargs: mock_get_method(args[0])
 
         item_list, exception_map = watcher.slurp()
+        print(item_list)
 
         self.assertIs(
             expr1=len(item_list),
