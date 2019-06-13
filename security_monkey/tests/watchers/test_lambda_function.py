@@ -79,4 +79,4 @@ class LambdaFunctionWatcherTestCase(SecurityMonkeyWatcherTestCase):
         self.assertIs(
             expr1=len(item_list),
             expr2=1,
-            msg="Watcher should have 1 item but has {}".format(len(item_list)))
+            msg="Watcher should have 1 item but has {}".format(item_list))
