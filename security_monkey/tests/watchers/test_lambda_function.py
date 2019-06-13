@@ -76,18 +76,18 @@ class LambdaFunctionWatcherTestCase(SecurityMonkeyWatcherTestCase):
         item_list, exception_map = watcher.slurp()
 
         i0 = [
-            item_list.[0].index,
-            item_list.[0].region,
-            item_list.[0].account,
-            item_list.[0].name,
-            item_list.[0].arn
+            item_list[0].index,
+            item_list[0].region,
+            item_list[0].account,
+            item_list[0].name,
+            item_list[0].arn
         ]
         i1 = [
-            item_list.[1].index,
-            item_list.[1].region,
-            item_list.[1].account,
-            item_list.[1].name,
-            item_list.[1].arn
+            item_list[1].index,
+            item_list[1].region,
+            item_list[1].account,
+            item_list[1].name,
+            item_list[1].arn
         ]
         self.assertIs(
             expr1=len(item_list),
