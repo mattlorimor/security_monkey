@@ -74,7 +74,7 @@ class CloudAuxWatcher(Watcher):
 
         @record_exception(source='{index}-watcher'.format(index=self.index), pop_exception_fields=True)
         def invoke_list_method(**kwargs):
-            print('WHEEE | {}'.**kwargs['conn_dict'])
+            print('WHEEE | {}'.format(**kwargs['conn_dict']))
             return self.list_method(**kwargs['conn_dict'])
 
         @record_exception(source='{index}-watcher'.format(index=self.index), pop_exception_fields=True)
